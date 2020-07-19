@@ -10,7 +10,7 @@ Librarian Endpoints:
                                                                                                                                                                      
 User Endpoints:                                                                                                                                                     
 •	An endpoint to return a checked out book.                                                                                                                         
-•	An endpoint that returns all currently checked out books for that user.
+•	An endpoint that returns all currently checked out books for that user.                                                                                           
 •	An endpoint to check out a book (assume a 2 week checkout period from time of call). A User can check out any book except when:                                   
--	They currently have 3 checked out books.                                                                                                                         
--	They are overdue on returning any book.                                                                                                                                                                                                                                                                                               
+1. They currently have 3 checked out books.                                                                                                                         
+2. They are overdue on returning any book.                                                                                                                                                                                                                                                                                               
