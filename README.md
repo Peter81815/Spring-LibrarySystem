@@ -1,5 +1,5 @@
 # Library-System-Website
-A API to manage a library’s book inventory. There are two main components of this API: management endpoints (to be used by the Librarians) and user facing endpoints for end-user actions. 
+An API to manage a library’s book inventory. There are two main components of this API: management endpoints (to be used by the Librarians) and user facing endpoints for end-user actions. 
 
 Books are referenced up by their ISBN. The library can have more than 1 copy of any given book (multiple copies of the same ISBN).
 
