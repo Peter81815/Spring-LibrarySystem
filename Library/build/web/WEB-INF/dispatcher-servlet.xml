@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="auth.htm">authController</prop>
+                <prop key="index.htm">authController</prop>
+                <prop key="logout.htm">authController</prop>
+                <prop key="addcompany.htm">bookController</prop>
+                
+                <prop key="manipulate.htm">bookController</prop>
+                <prop key="add.htm">bookController</prop>
+                <prop key="remove.htm">bookController</prop>
+                <prop key="overdue.htm">bookController</prop>
+                
+                <prop key="checkout.htm">bookController</prop>
+                <prop key="returnone.htm">bookController</prop>
+                <prop key="returnall.htm">bookController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    
+    <bean name="authController" class="com.neu.controller.AuthenticationController"/>
+    <bean name="bookController" class="com.neu.controller.BookController"/>
+<!--    <bean name="wholeCompanyController" class="com.neu.controller.WholecompanyController"/>-->
+
+</beans>
